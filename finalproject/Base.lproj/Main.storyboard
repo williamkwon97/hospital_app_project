@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,40 +58,118 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--patientSide-->
         <scene sceneID="c1Z-tn-6KU">
             <objects>
-                <viewController id="qQ7-Fu-dDQ" sceneMemberID="viewController">
+                <viewController id="qQ7-Fu-dDQ" userLabel="patientSide" sceneMemberID="viewController">
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="1Vi-gP-iqH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Patient:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-0O-LJb">
-                                <rect key="frame" x="66" y="173" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CK4-jJ-vET">
-                                <rect key="frame" x="202" y="166" width="146" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-X8-ggL">
-                                <rect key="frame" x="66" y="298" width="282" height="52"/>
+                                <rect key="frame" x="206" y="862" width="282" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Ready to Pick Up"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNL-Oc-zdd">
-                                <rect key="frame" x="20" y="384" width="374" height="445"/>
+                            <view contentMode="scaleToFill" id="fPT-90-JMR">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="VST-k9-HIG"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNL-Oc-zdd" userLabel="enterInformation">
+                                <rect key="frame" x="20" y="44" width="374" height="585"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-IF-6gd">
+                                        <rect key="frame" x="10" y="20" width="305.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient First Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awK-Uk-Dt4">
+                                                <rect key="frame" x="0.0" y="0.0" width="149.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientFirstNameVar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-Uk-I8z" userLabel="patientVar">
+                                                <rect key="frame" x="149.5" y="0.0" width="156" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkq-Xf-pYL">
+                                        <rect key="frame" x="10" y="50.5" width="304.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Last Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-nu-626">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientLastNameVar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9R-Ol-aej" userLabel="patientVar">
+                                                <rect key="frame" x="149" y="0.0" width="155.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-d6-F2B">
+                                        <rect key="frame" x="10" y="81" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Room Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsU-Yh-5rH">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientRoomNumVar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-rb-P8b" userLabel="patientVar">
+                                                <rect key="frame" x="177" y="0.0" width="158" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-ap-yKK">
+                                        <rect key="frame" x="10" y="111.5" width="278" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Date of Birth: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaF-cu-Rds">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientDOBVar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmN-Lg-Nd8" userLabel="patientVar">
+                                                <rect key="frame" x="164" y="0.0" width="114" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="lFc-ap-yKK" firstAttribute="leading" secondItem="QNL-Oc-zdd" secondAttribute="leading" constant="10" id="39t-Hv-WqX"/>
+                                    <constraint firstItem="fkq-Xf-pYL" firstAttribute="leading" secondItem="QNL-Oc-zdd" secondAttribute="leading" constant="10" id="AgX-jn-OzD"/>
+                                    <constraint firstItem="fkq-Xf-pYL" firstAttribute="top" secondItem="WDD-IF-6gd" secondAttribute="bottom" constant="10" id="GGg-zp-ytP"/>
+                                    <constraint firstItem="aRS-d6-F2B" firstAttribute="top" secondItem="fkq-Xf-pYL" secondAttribute="bottom" constant="10" id="LlA-ma-bmr"/>
+                                    <constraint firstItem="WDD-IF-6gd" firstAttribute="top" secondItem="QNL-Oc-zdd" secondAttribute="top" constant="20" id="ZDf-WB-36v"/>
+                                    <constraint firstItem="lFc-ap-yKK" firstAttribute="top" secondItem="aRS-d6-F2B" secondAttribute="bottom" constant="10" id="gje-DK-QUe"/>
+                                    <constraint firstItem="aRS-d6-F2B" firstAttribute="leading" secondItem="QNL-Oc-zdd" secondAttribute="leading" constant="10" id="oCF-tK-iXP"/>
+                                    <constraint firstItem="WDD-IF-6gd" firstAttribute="leading" secondItem="QNL-Oc-zdd" secondAttribute="leading" constant="10" id="oeq-Re-pIM"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QNL-Oc-zdd" firstAttribute="top" secondItem="sZy-iW-1wO" secondAttribute="top" constant="20" id="DPm-Be-MZU"/>
+                            <constraint firstItem="sZy-iW-1wO" firstAttribute="trailing" secondItem="QNL-Oc-zdd" secondAttribute="trailing" constant="20" id="IcB-Pi-7Ym"/>
+                            <constraint firstItem="QNL-Oc-zdd" firstAttribute="leading" secondItem="sZy-iW-1wO" secondAttribute="leading" constant="20" id="LUZ-i1-kES"/>
+                            <constraint firstItem="QNL-Oc-zdd" firstAttribute="centerX" secondItem="sZy-iW-1wO" secondAttribute="centerX" id="k50-37-ZmD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sZy-iW-1wO"/>
                     </view>
                 </viewController>
